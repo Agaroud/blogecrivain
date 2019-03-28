@@ -4,8 +4,8 @@ namespace App\src\controller;
 
 use App\src\model\DAO\BilletDAO;
 use App\src\model\DAO\CommentDAO;
-use App\src\model\View;
-use App\src\model\ViewSecure;
+use App\templates\View;
+use App\templates\ViewSecure;
 
 class BackController
 {
