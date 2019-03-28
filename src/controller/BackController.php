@@ -2,8 +2,8 @@
 
 namespace App\src\controller;
 
-use App\src\DAO\BilletDAO;
-use App\src\DAO\CommentDAO;
+use App\src\model\DAO\BilletDAO;
+use App\src\model\DAO\CommentDAO;
 use App\src\model\View;
 use App\src\model\ViewSecure;
 
