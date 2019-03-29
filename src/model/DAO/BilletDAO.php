@@ -8,7 +8,7 @@ class BilletDAO extends DAO
 {
     public function getBillets()
     {
-        $sql = 'SELECT id, title, content, date_added FROM billet ORDER BY id DESC';
+        $sql = 'SELECT id, title, SUBSTRING(content, 1, 500) AS content, date_added FROM billet ORDER BY id DESC';
         $result = $this->sql($sql);
         $billets = [];
         foreach ($result as $row) {

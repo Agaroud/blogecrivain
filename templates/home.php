@@ -27,8 +27,8 @@ $this->title = "Accueil";
         ?>
             <div class="articles">
                 <h2><?= htmlspecialchars_decode($billet->getTitle());?></h2>
-                <a href="../public/index.php?route=billet&idBillet=<?= htmlspecialchars($billet->getId());?>" id="listeComment">(voir les commentaires)</a>
-                <p><?= htmlspecialchars_decode($billet->getContent());?></p>                
+                <a href="../public/index.php?route=billet&idBillet=<?= htmlspecialchars($billet->getId());?>" id="listeComment">(voir la suite)</a>
+                <p><?= htmlspecialchars_decode($billet->getContent());?>...</p>                
                 <p>Créé le : <?= htmlspecialchars($billet->getDateAdded());?></p>
             </div>
             <br>

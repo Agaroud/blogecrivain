@@ -29,7 +29,7 @@ $this->title = "AccueilAdmin";
         ?>
             <div class="articles">
                 <h2><?= htmlspecialchars_decode($billet->getTitle());?></h2>                
-                <p><?= htmlspecialchars_decode($billet->getContent());?></p>                
+                <p><?= htmlspecialchars_decode($billet->getContent());?>...</p>                
                 <p>Créé le : <?= htmlspecialchars($billet->getDateAdded());?></p>
             </div>
             <br>

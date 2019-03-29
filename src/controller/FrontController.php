@@ -67,7 +67,7 @@ class FrontController
     public function home()
     {    	
         $billets = $this->billetDAO->getBillets();
-       $this->view->render('home', ['billets' => $billets]);
+        $this->view->render('home', ['billets' => $billets]);
     }
 
     public function billet($idBillet)
