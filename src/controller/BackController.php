@@ -5,22 +5,20 @@ namespace App\src\controller;
 use App\src\model\DAO\BilletDAO;
 use App\src\model\DAO\CommentDAO;
 use App\templates\View;
-use App\templates\ViewSecure;
+
 
 class BackController
 {
     private $billetDAO;
     private $commentDAO;    
 	private $view;
-	private $viewSecure;
-
+	
 	
     public function __construct()
     {
         $this->billetDAO = new BilletDAO();
         $this->commentDAO = new CommentDAO();
-        $this->view = new View();
-        $this->viewSecure = new ViewSecure();
+        $this->view = new View();        
     }
 
     public function addBillet($post)
@@ -50,7 +48,7 @@ class BackController
             //$billet = $this->billetDAO->editeBillet($idBillet);
             //$this->view->render('edit_billet', ['billet' => $billet]);
             $billets = $this->billetDAO->getBillets();
-            $this->viewSecure->render('homeAdmin', ['billets' => $billets]);
+            $this->view->render('homeAdmin', ['billets' => $billets]);
         }
         //$billet = $this->billetDAO->getBillet($idBillet);        
         //$idBillet=$_POST['idBillet'];
@@ -81,7 +79,7 @@ class BackController
         }
         $comments= $this->commentDAO->getSignalNumber();
         $billets = $this->billetDAO->getBillets();
-        $this->viewSecure->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
+        $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
     }    
     
     public function SignalList()

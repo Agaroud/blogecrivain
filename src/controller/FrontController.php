@@ -5,16 +5,13 @@ namespace App\src\controller;
 use App\src\model\DAO\BilletDAO;
 use App\src\model\DAO\CommentDAO;
 use App\templates\View;
-use App\templates\ViewSecure;
-
 
 
 class FrontController
 {
 	private $billetDAO;
     private $commentDAO;
-    private $view;
-    private $viewSecure;
+    private $view;    
     
 
     public function __construct()
@@ -22,8 +19,7 @@ class FrontController
     {
         $this->billetDAO = new BilletDAO();
         $this->commentDAO = new CommentDAO();
-        $this->view = new View();
-        $this->viewSecure = new ViewSecure();
+        $this->view = new View();        
     }
 
     public function addComment($post,$idBillet)
@@ -61,7 +57,7 @@ class FrontController
     {
         $comments= $this->commentDAO->getSignalNumber();
         $billets = $this->billetDAO->getBillets();
-        $this->viewSecure->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
+        $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
     }
     
     public function home()
