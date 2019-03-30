@@ -87,7 +87,7 @@ section{
 	margin:10px;
 }
 
-.ajoutbillet, .voirbillet, #retourAcc, #listsignals{
+.ajoutbillet, .voirbillet, #retourAcc, #listsignals, #deconect{
 	display: block;
 	text-align: right;
 	margin-right: 70px;
@@ -155,5 +155,5 @@ input[type=submit]:hover{
 #liens{
 	display : flex;
 	text-align: right;
-	margin-left:560px;	
+	margin-left:390px;	
 }
