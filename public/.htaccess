@@ -1,0 +1,10 @@
+<Files indexAdmin.php>
+AuthUserFile "C:\wamp64\www\php\blogdelecrivain\admin\.htpasswd"
+AuthGroupFile /dev/null
+AuthName "Veuillez renseigner votre login et mot de passe"
+AuthType Basic
+Require valid-user
+</Files>
+
+
+
