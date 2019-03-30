@@ -22,5 +22,5 @@ $this->title = "bienvenue";
   </section>
   
     <footer>
-        	<a href="../public/index.php?route=espaceAdmin" class="Admin">Espace Admin</a>    
+        	<a href="../public/indexAdmin.php?route=espaceAdmin" class="Admin">Espace Admin</a>    
     </footer>
