@@ -48,7 +48,9 @@ class BackController
             //$billet = $this->billetDAO->editeBillet($idBillet);
             //$this->view->render('edit_billet', ['billet' => $billet]);
             $billets = $this->billetDAO->getBillets();
-            $this->view->render('homeAdmin', ['billets' => $billets]);
+            $comments= $this->commentDAO->getSignalNumber();
+            $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
+            //$this->view->render('homeAdmin', ['billets' => $billets]);
         }
         //$billet = $this->billetDAO->getBillet($idBillet);        
         //$idBillet=$_POST['idBillet'];

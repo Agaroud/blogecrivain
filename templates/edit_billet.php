@@ -17,7 +17,7 @@ $this->title = "Modifier un billet";
 <section>
 	<a href="../public/index.php?route=espaceAdmin" class="Admin">Retour la liste des billets</a>
 	<div class="formulaire">
-    	<form method="post" action="../public/index.php?route=modifierBillet&amp;idBillet=<?php echo $billet->getId()?>">
+    	<form method="post" action="../public/index.php?route=modifierBillet&amp;idBillet=<?php htmlspecialchars($billet->getId());?>">
         	<label for="title">Titre</label><br>
         	<input type="text" id="title" name="title" value="<?= htmlspecialchars_decode($billet->getTitle());?>"><br>
         	<label for="content">Texte</label><br>

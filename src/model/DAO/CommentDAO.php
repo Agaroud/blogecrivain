@@ -51,14 +51,11 @@ class CommentDAO extends DAO
     
     public function getSignalNumber()
     {
-        $sql = 'SELECT COUNT(signalement) AS nbsignal FROM comment';
+        $sql = 'SELECT COUNT(*) AS nbsignal FROM comment WHERE signalement>0';
         $result = $this->sql($sql);
-        $comments = $result;
-        /*foreach ($result as $row) {
-            $commentId = $row['id'];
-            $comments[$commentId] = $this->buildObject($row);
-        }*/
-        //return $comments;
+        $comments = $result->fetch();
+        $nb = $comments['nbsignal'];
+        return $nb;        
     }
 
     private function buildObject(array $row)
@@ -68,7 +65,7 @@ class CommentDAO extends DAO
         $comment->setPseudo($row['pseudo']);
         $comment->setContent($row['content']);
         $comment->setDateAdded($row['date_added']);
-        //$comment->setSignalement($row['signalement'])
+        //$comment->setSignalement($row['signalement']);
         return $comment;
     }
 }

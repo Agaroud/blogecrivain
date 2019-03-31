@@ -12,7 +12,7 @@ class Comment
     
     private $dateAdded;
 
-    //private $signalement;
+    private $signalement;
 
     /**
      * @return mixed
@@ -78,7 +78,7 @@ class Comment
         $this->dateAdded = $dateAdded;
     }
 
-    /*public function getSignalement()
+    public function getSignalement()
     {
         return $this->signalement;
     }
@@ -86,5 +86,5 @@ class Comment
      public function setSignalement($signalement)
     {
         $this->signalement = $signalement;
-    }*/
+    }
 }

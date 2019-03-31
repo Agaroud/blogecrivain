@@ -40,7 +40,7 @@ class BilletDAO extends DAO
     
     public function supprimeBillet($idBillet)
     {
-        $sql = 'DELETE FROM billet WHERE id = ?' ;
+        $sql = 'DELETE FROM billet WHERE id = ?';
         $this->sql($sql,[$idBillet]);
     }
     

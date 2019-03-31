@@ -55,9 +55,9 @@ class FrontController
     
     public function espaceAdmin()
     {
-        $comments= $this->commentDAO->getSignalNumber();
+        $nb= $this->commentDAO->getSignalNumber();
         $billets = $this->billetDAO->getBillets();
-        $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
+        $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]);
     }
     
     public function home()
