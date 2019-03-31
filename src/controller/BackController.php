@@ -38,23 +38,19 @@ class BackController
         $this->view->render('edit_billet', ['billet' => $billet]);
     }
     
-    public function modifierBillet($post,$idBillet)
+    public function modifierBillet($post)
     {
         if(isset($post['submit'])) {
+            $idBillet=$_POST['idBillet'];
             $billetDAO = new BilletDAO();
             $billetDAO->modifierBillet($post,$idBillet);
             session_start();
-            $_SESSION['add_billet'] = 'Le billet a bien été modifié';
-            //$billet = $this->billetDAO->editeBillet($idBillet);
-            //$this->view->render('edit_billet', ['billet' => $billet]);
+            $_SESSION['add_billet'] = 'Le billet a bien été modifié';            
             $billets = $this->billetDAO->getBillets();
-            $comments= $this->commentDAO->getSignalNumber();
-            $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
-            //$this->view->render('homeAdmin', ['billets' => $billets]);
+            $nb= $this->commentDAO->getSignalNumber();           
+            $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]);            
         }
-        //$billet = $this->billetDAO->getBillet($idBillet);        
-        //$idBillet=$_POST['idBillet'];
-        //$this->view->render('edit_billet', ['post' => $post]);
+        
     }
     
     public function supprimeComment()

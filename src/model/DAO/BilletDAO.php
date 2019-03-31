@@ -48,7 +48,7 @@ class BilletDAO extends DAO
     {
         extract($billet);
         $sql = 'UPDATE billet SET title = ?, content = ?, date_added = NOW() WHERE id = ?';
-        $this->sql($sql, [$title, $content]);
+        $this->sql($sql, [$title, $content,$idBillet]);
     }
     
     public function editeBillet($idBillet)

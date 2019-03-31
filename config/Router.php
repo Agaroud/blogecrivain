@@ -65,7 +65,7 @@ class Router
                 }  
                 
                 else if($_GET['route'] === 'modifierBillet'){
-                    $this->backController->modifierBillet($_POST,$_GET['idBillet']);
+                    $this->backController->modifierBillet($_POST,$_POST['idBillet']);
                 }
                                 
                 else if($_GET['route'] === 'voirbillets') 
