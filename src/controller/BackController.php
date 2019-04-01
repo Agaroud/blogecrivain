@@ -45,7 +45,7 @@ class BackController
             $billetDAO = new BilletDAO();
             $billetDAO->modifierBillet($post,$idBillet);
             session_start();
-            $_SESSION['add_billet'] = 'Le billet a bien été modifié';            
+            $_SESSION['modif_billet'] = 'Le billet a bien été modifié';            
             $billets = $this->billetDAO->getBillets();
             $nb= $this->commentDAO->getSignalNumber();           
             $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]);            
@@ -60,7 +60,7 @@ class BackController
             $commentDAO = new CommentDAO();
             $commentDAO->supprimeComment($idComment);
             session_start();
-            $_SESSION['add_billet'] = 'Le commentaire a bien été supprimé';
+            $_SESSION['suppr_comment'] = 'Le commentaire a bien été supprimé';
         }  
         $comments = $this->commentDAO->getSignalComments();
         $this->view->render('signals', ['comments' => $comments]);

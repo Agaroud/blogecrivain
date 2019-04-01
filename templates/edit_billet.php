@@ -7,13 +7,7 @@ $this->title = "Modifier un billet";
         <h3 >Jean Forteroche</h3>
 	</div>
 </header>
-
-	<?php
-            if(isset($_SESSION['add_billet'])) {
-            echo '<p class="notification">'.$_SESSION['add_billet'].'</p>';
-            unset($_SESSION['add_billet']);
-            }
-    ?>
+	
 <section>
 	<a href="../public/index.php?route=espaceAdmin" class="Admin">Retour la liste des billets</a>
 	<div class="formulaire">

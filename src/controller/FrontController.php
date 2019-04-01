@@ -28,7 +28,7 @@ class FrontController
             $commentDAO = new CommentDAO();
             $commentDAO->addComment($post,$idBillet);
             session_start();
-            $_SESSION['add_billet'] = 'Le nouveau commentaire a bien été ajouté';          
+            $_SESSION['add_comment'] = 'Le nouveau commentaire a bien été ajouté';          
             $billet = $this->billetDAO->getBillet($idBillet);
         	$comments = $this->commentDAO->getCommentsFromBillet($idBillet);
         	$this->view->render('single', ['billet' => $billet,'comments' => $comments]);        	
@@ -42,7 +42,7 @@ class FrontController
             $commentDAO = new CommentDAO();
             $commentDAO->signalComment($idComment);
             session_start();
-            $_SESSION['add_billet'] = 'Le commentaire a bien été signalé';          
+            $_SESSION['signal_comment'] = 'Le commentaire a bien été signalé';          
         }        
         $idBillet=$_POST['idBillet'];
         $this->billet($idBillet);

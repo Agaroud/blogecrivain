@@ -9,6 +9,12 @@ $this->title = "AccueilAdmin";
         <h3 >Jean Forteroche</h3>
     </div>
         <?php
+        
+            if(isset($_SESSION['modif_billet'])) {
+            echo '<p class="notification">'.$_SESSION['modif_billet'].'</p>';
+            unset($_SESSION['modif_billet']);
+            }
+        
 			if(isset($_SESSION['suppr_billet'])) {
     		echo '<p class="notification">'.$_SESSION['suppr_billet'].'</p>';
     		unset($_SESSION['suppr_billet']);

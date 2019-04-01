@@ -11,9 +11,9 @@ $this->title = "Signals";
   </header>
   
     <?php
-            if(isset($_SESSION['add_billet'])) {
-            echo '<p class="notification">'.$_SESSION['add_billet'].'</p>';
-            unset($_SESSION['add_billet']);
+            if(isset($_SESSION['suppr_comment'])) {
+            echo '<p class="notification">'.$_SESSION['suppr_comment'].'</p>';
+            unset($_SESSION['suppr_comment']);
             }
     ?>
     
