@@ -1,5 +1,4 @@
 
-
 <?php
 $this->title = "AccueilAdmin";
 ?>
@@ -10,9 +9,9 @@ $this->title = "AccueilAdmin";
         <h3 >Jean Forteroche</h3>
     </div>
         <?php
-			if(isset($_SESSION['add_billet'])) {
-    		echo '<p class="notification">'.$_SESSION['add_billet'].'</p>';
-    		unset($_SESSION['add_billet']);
+			if(isset($_SESSION['suppr_billet'])) {
+    		echo '<p class="notification">'.$_SESSION['suppr_billet'].'</p>';
+    		unset($_SESSION['suppr_billet']);
             }
         ?>
        <div id="liens">

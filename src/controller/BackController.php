@@ -73,11 +73,11 @@ class BackController
             $billetDAO = new BilletDAO();
             $billetDAO->supprimeBillet($idBillet);
             session_start();
-            $_SESSION['add_billet'] = 'Le billet a bien été supprimé';
-        }
-        $comments= $this->commentDAO->getSignalNumber();
+            $_SESSION['suppr_billet'] = 'Le billet a bien été supprimé';
+        }        
         $billets = $this->billetDAO->getBillets();
-        $this->view->render('homeAdmin', ['billets' => $billets,'comments' => $comments]);
+        $nb= $this->commentDAO->getSignalNumber();
+        $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]);
     }    
     
     public function SignalList()
