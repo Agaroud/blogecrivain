@@ -15,5 +15,6 @@
     <div id="content">
         <?= $content ?>
     </div>
+    <script src="../public/js/verif.js"></script>
 </body>
 </html>

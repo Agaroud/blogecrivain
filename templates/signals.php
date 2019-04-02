@@ -31,7 +31,7 @@ $this->title = "Signals";
             <p><?= htmlspecialchars_decode($comment->getContent());?></p>
             <p>Posté le <?= htmlspecialchars($comment->getDateAdded());?></p>
         </div>
-        <form method="post" action="../public/index.php?route=supprimeComment">
+        <form method="post" action="../public/index.php?route=supprimeComment" onSubmit="return verif()">
             <input type="hidden" value="<?php echo $comment->getId()?>" name="idComment">
            	
             <input type="submit" value="Supprimer" id="supprimer" name="supprimer">

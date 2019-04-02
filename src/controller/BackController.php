@@ -25,11 +25,13 @@ class BackController
     {
         if(isset($post['submit'])) {
             $billetDAO = new BilletDAO();
-            $billetDAO->addBillet($post);
+            $billetDAO->addBillet($post);            
             session_start();
-            $_SESSION['add_billet'] = 'Le nouveau billet a bien été ajouté';
+            $_SESSION['add_billet'] = 'Le nouveau billet a bien été ajouté';            
         }
-        $this->view->render('add_billet', ['post' => $post]);
+        else {
+            $this->view->render('add_billet', ['post' => $post]);
+        }        
     }    
       
     public function editeBillet($idBillet)

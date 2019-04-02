@@ -35,7 +35,7 @@ class BilletDAO extends DAO
         //Permet de récupérer les variables $title et $content
         extract($billet);
         $sql = 'INSERT INTO billet (title, content, date_added) VALUES (?, ?, NOW())';
-        $this->sql($sql, [$title, $content]);
+        $this->sql($sql, [$title, $content]);        
     }
     
     public function supprimeBillet($idBillet)

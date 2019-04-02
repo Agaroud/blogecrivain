@@ -40,7 +40,7 @@ $this->title = "AccueilAdmin";
             </div>
             <br>
             
-            	<form method="post" action="../public/index.php?route=supprimeBillet">
+            	<form method="post" action="../public/index.php?route=supprimeBillet" onSubmit="return verif()">
             		<input type="hidden" value="<?php echo $billet->getId()?>" name="idBillet">           	
             		<input type="submit" value="Supprimer" id="supprimeBillet" name="supprimeBillet">            	          	
         		</form>
