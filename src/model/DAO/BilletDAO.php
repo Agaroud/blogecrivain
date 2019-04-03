@@ -30,7 +30,7 @@ class BilletDAO extends DAO
         }
     }
 
-    public function addBillet($billet)
+    public function rajoutBillet($billet)
     {
         //Permet de récupérer les variables $title et $content
         extract($billet);

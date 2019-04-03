@@ -8,16 +8,16 @@ $this->title = "Ajouter un billet";
 	</div>
 </header>
 
-	<?php
+	<!--<?php
             if(isset($_SESSION['add_billet'])) {
             echo '<p class="notification">'.$_SESSION['add_billet'].'</p>';
             unset($_SESSION['add_billet']);
             }
-    ?>
+    ?>-->
 <section>
 	<a href="../public/index.php?route=espaceAdmin" class="Admin">Retour la liste des billets</a>
 	<div class="formulaire">
-    	<form method="post" action="../public/index.php?route=addBillet">
+    	<form method="post" action="../public/index.php?route=rajoutBillet">
         	<label for="title">Titre</label><br>
         	<input type="text" id="title" name="title" value="<?php
             if(isset($post['title'])){

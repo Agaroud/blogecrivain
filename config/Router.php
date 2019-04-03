@@ -41,8 +41,12 @@ class Router
                 }
                 
                 else if($_GET['route'] === 'addBillet'){
-                    $this->backController->addBillet($_POST);
+                    $this->backController->addBillet();
                 }
+                
+                else if($_GET['route'] === 'rajoutBillet'){
+                    $this->backController->rajoutBillet($_POST);
+                }                
 
                 else if($_GET['route'] === 'addComment'){
                     $this->frontController->addComment($_POST,$_GET['idBillet']);

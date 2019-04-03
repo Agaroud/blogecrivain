@@ -21,18 +21,24 @@ class BackController
         $this->view = new View();        
     }
 
-    public function addBillet($post)
+    public function addBillet()
     {
+        $this->view->render('add_billet');
+    }  
+        
+    public function rajoutBillet($post)
+    {        
         if(isset($post['submit'])) {
             $billetDAO = new BilletDAO();
-            $billetDAO->addBillet($post);            
+            $billetDAO->rajoutBillet($post);            
             session_start();
-            $_SESSION['add_billet'] = 'Le nouveau billet a bien été ajouté';            
-        }
-        else {
-            $this->view->render('add_billet', ['post' => $post]);
+            $_SESSION['add_billet'] = 'Le nouveau billet a bien été ajouté';
+            $billets = $this->billetDAO->getBillets();
+            $nb= $this->commentDAO->getSignalNumber();
+            $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]); 
         }        
-    }    
+    }
+    
       
     public function editeBillet($idBillet)
     {

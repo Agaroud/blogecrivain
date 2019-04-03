@@ -10,21 +10,26 @@ $this->title = "AccueilAdmin";
     </div>
         <?php
         
+            if(isset($_SESSION['add_billet'])) {
+                echo '<p class="notification">'.$_SESSION['add_billet'].'</p>';
+                unset($_SESSION['add_billet']);
+            }
+        
             if(isset($_SESSION['modif_billet'])) {
-            echo '<p class="notification">'.$_SESSION['modif_billet'].'</p>';
-            unset($_SESSION['modif_billet']);
+                echo '<p class="notification">'.$_SESSION['modif_billet'].'</p>';
+                unset($_SESSION['modif_billet']);
             }
         
 			if(isset($_SESSION['suppr_billet'])) {
-    		echo '<p class="notification">'.$_SESSION['suppr_billet'].'</p>';
-    		unset($_SESSION['suppr_billet']);
+    		  echo '<p class="notification">'.$_SESSION['suppr_billet'].'</p>';
+    		  unset($_SESSION['suppr_billet']);
             }
         ?>
        <div id="liens">
         <a href="../public/index.php?" id="retourAcc">Retour à l'accueil</a>
         <a href="../public/index.php?route=addBillet" class="ajoutbillet" id="ajoutdebillet">Ajouter un billet</a>
         <a href="../public/index.php?route=SignalList" id="listsignals">Voir les commentaires signalés(<?php echo $nb ?>)</a>
-        <a href="../public/indexAdmin.php?logout" id="deconect">Déconnexion</a>
+        <!--<a href="../public/indexAdmin.php?logout" id="deconect">Déconnexion</a>-->
        </div>
   </header>
   <section>
