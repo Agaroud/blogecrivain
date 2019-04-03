@@ -28,7 +28,7 @@ class BackController
         
     public function rajoutBillet($post)
     {        
-        if(isset($post['submit'])) {
+        if(isset($post['submit']) and !empty($post['title']) and !empty($post['content'])){
             $billetDAO = new BilletDAO();
             $billetDAO->rajoutBillet($post);            
             session_start();
@@ -36,7 +36,11 @@ class BackController
             $billets = $this->billetDAO->getBillets();
             $nb= $this->commentDAO->getSignalNumber();
             $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]); 
-        }        
+        }
+        else{
+            echo "<script language='javascript'>confirm('le titre et texte doivent être remplis')</script>";
+            $this->view->render('add_billet');
+            }
     }
     
       

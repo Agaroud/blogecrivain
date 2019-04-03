@@ -24,7 +24,7 @@ class FrontController
 
     public function addComment($post,$idBillet)
     {
-        if(isset($post['submit'])) {
+        if(isset($post['submit']) and !empty($post['pseudo']) and !empty($post['content'])){
             $commentDAO = new CommentDAO();
             $commentDAO->addComment($post,$idBillet);
             session_start();
@@ -32,7 +32,14 @@ class FrontController
             $billet = $this->billetDAO->getBillet($idBillet);
         	$comments = $this->commentDAO->getCommentsFromBillet($idBillet);
         	$this->view->render('single', ['billet' => $billet,'comments' => $comments]);        	
-        }        
+        } 
+        
+        else{
+            echo "<script language='javascript'>confirm('le pseudo et texte doivent être remplis')</script>";
+            $billet = $this->billetDAO->getBillet($idBillet);
+            $comments = $this->commentDAO->getCommentsFromBillet($idBillet);
+            $this->view->render('single', ['billet' => $billet,'comments' => $comments]);  
+        }
     }
     
     public function signalComment(){
