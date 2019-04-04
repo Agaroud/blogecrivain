@@ -31,6 +31,11 @@ class CommentDAO extends DAO
         $this->sql($sql,[$idComment]);
     }
     
+    public function designalComment($idComment){
+        $sql = 'UPDATE comment SET signalement= 0 WHERE id = ?' ;
+        $this->sql($sql,[$idComment]);        
+    }
+    
     public function supprimeComment($idComment)    
     {       
         $sql = 'DELETE FROM comment WHERE id = ?' ;

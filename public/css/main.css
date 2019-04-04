@@ -12,7 +12,12 @@ body {
     background-image: url("img/alaska.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
+}
+
+.titre{
+	text-align: center;
+	color: white;
 }
 
 a{
@@ -140,6 +145,17 @@ input[type=submit]:hover{
 	left:1125px;
 	color: #8b0000;
 	border-radius: 5px;
+	
+}
+
+#designal{
+	color:#8b0000;
+	background-color: #e7e7e7;
+	border-radius: 5px;
+	text-align: left;
+	padding: 2px;
+	position: relative;
+	left: -90px;
 	
 }
 

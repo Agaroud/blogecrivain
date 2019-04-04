@@ -6,6 +6,7 @@ $this->title = "Ajouter un billet";
         <h1 >Billet simple pour l'Alaska</h1>
         <h3 >Jean Forteroche</h3>
 	</div>
+	<h3 class="titre">Ajouter un billet</h3> 
 </header>
 
 	<!--<?php

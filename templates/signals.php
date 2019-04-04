@@ -8,6 +8,7 @@ $this->title = "Signals";
         <h1 >Billet simple pour l'Alaska</h1>
         <h3 >Jean Forteroche</h3>
     </div>
+    <h3 class="titre">Commentaires signalés</h3> 
   </header>
   
     <?php
@@ -15,6 +16,12 @@ $this->title = "Signals";
             echo '<p class="notification">'.$_SESSION['suppr_comment'].'</p>';
             unset($_SESSION['suppr_comment']);
             }
+            
+            if(isset($_SESSION['designal_comment'])) {
+                echo '<p class="notification">'.$_SESSION['designal_comment'].'</p>';
+                unset($_SESSION['designal_comment']);
+            }        
+            
     ?>
     
   <section>
@@ -35,7 +42,9 @@ $this->title = "Signals";
             <input type="hidden" value="<?php echo $comment->getId()?>" name="idComment">
            	
             <input type="submit" value="Supprimer" id="supprimer" name="supprimer">
+            <a href="../public/index.php?route=designalComment&amp;idComment=<?= htmlspecialchars($comment->getId());?>" id="designal" >Désignaler</a>
         </form>
+        
         <?php
         }        
         ?>   

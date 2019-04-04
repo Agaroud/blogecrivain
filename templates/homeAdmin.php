@@ -28,7 +28,7 @@ $this->title = "AccueilAdmin";
        <div id="liens">
         <a href="../public/index.php?" id="retourAcc">Retour à l'accueil</a>
         <a href="../public/index.php?route=addBillet" class="ajoutbillet" id="ajoutdebillet">Ajouter un billet</a>
-        <a href="../public/index.php?route=SignalList" id="listsignals">Voir les commentaires signalés(<?php echo $nb ?>)</a>
+        <a href="../public/index.php?route=signalList" id="listsignals">Voir les commentaires signalés(<?php echo $nb ?>)</a>
         <!--<a href="../public/indexAdmin.php?logout" id="deconect">Déconnexion</a>-->
        </div>
   </header>
@@ -45,13 +45,13 @@ $this->title = "AccueilAdmin";
             </div>
             <br>
             
+            <div class="form">            
             	<form method="post" action="../public/index.php?route=supprimeBillet" onSubmit="return verif()">
             		<input type="hidden" value="<?php echo $billet->getId()?>" name="idBillet">           	
             		<input type="submit" value="Supprimer" id="supprimeBillet" name="supprimeBillet">            	          	
-        		</form>
-        	 
-        		<a href="../public/index.php?route=editeBillet&idBillet=<?= htmlspecialchars($billet->getId());?>" id="editer" >Editer</a>
-            
+        		</form>        	 
+        		<a href="../public/index.php?route=editeBillet&amp;idBillet=<?= htmlspecialchars($billet->getId());?>" id="editer" >Editer</a>
+        	</div>          
         	<br>  
                        
         <?php

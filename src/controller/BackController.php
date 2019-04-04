@@ -65,6 +65,19 @@ class BackController
         
     }
     
+    public function designalComment(){
+        
+        if(isset($_GET['idComment'])) {
+            $idComment=$_GET['idComment'];
+            $commentDAO = new CommentDAO();
+            $commentDAO->designalComment($idComment);
+            session_start();
+            $_SESSION['designal_comment'] = 'Le commentaire a bien été désignalé';
+        }
+        $comments = $this->commentDAO->getSignalComments();
+        $this->view->render('signals', ['comments' => $comments]);
+    }    
+    
     public function supprimeComment()
     {
         if(isset($_POST['idComment'])) {            
@@ -92,7 +105,7 @@ class BackController
         $this->view->render('homeAdmin', ['billets' => $billets,'nb' => $nb]);
     }    
     
-    public function SignalList()
+    public function signalList()
     {
         $comments = $this->commentDAO->getSignalComments();
         $this->view->render('signals', ['comments' => $comments]);

@@ -36,8 +36,8 @@ class Router
                     $this->frontController->billet($_GET['idBillet']);
                 }
                 
-                else if($_GET['route'] === 'SignalList'){
-                    $this->backController->SignalList();
+                else if($_GET['route'] === 'signalList'){
+                    $this->backController->signalList();
                 }
                 
                 else if($_GET['route'] === 'addBillet'){
@@ -58,6 +58,10 @@ class Router
                 
                 else if($_GET['route'] === 'supprimeComment'){                   
                     $this->backController->supprimeComment();                    
+                }
+                
+                else if($_GET['route'] === 'designalComment'){
+                    $this->backController->designalComment();
                 }
                 
                 else if($_GET['route'] === 'supprimeBillet'){
