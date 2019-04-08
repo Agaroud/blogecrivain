@@ -1,6 +1,7 @@
 <?php
 
-namespace App\src\controller;
+namespace App\src\controller;//utilisation des namespace pour afin de ne pas à avoir à se soucier
+//si un nom a déjà été utilisé par une autre constante, fonction ou classe
 
 use App\src\model\DAO\BilletDAO;
 use App\src\model\DAO\CommentDAO;

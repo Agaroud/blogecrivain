@@ -97,6 +97,7 @@ class Router
                 $this->frontController->premierepage();
             }
         }
+        
         catch (Exception $e)
         {
             $this->errorController->error();

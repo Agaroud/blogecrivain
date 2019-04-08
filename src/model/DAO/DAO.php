@@ -5,10 +5,10 @@ namespace App\src\model\DAO;
 use Exception;
 use PDO;
 
-abstract class DAO
+abstract class DAO//classe abstraite : ne peut être instanciée
 {
     
-    private $connection;
+    private $connection;//propriété stockant état de la connection
 
     private function checkConnection()
     {
@@ -38,7 +38,7 @@ abstract class DAO
     }
     
     
-    protected function sql($sql, $parameters = null)
+    protected function sql($sql, $parameters = null)//ne peut être appelé que depuis la classe ou ses heritiers
     {
         if($parameters)
         {

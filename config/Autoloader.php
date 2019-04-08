@@ -2,7 +2,7 @@
 
 namespace App\config;
 
-class Autoloader
+class Autoloader//évite d'avoir à faire les require dans templates
 {
     public static function register()
     {

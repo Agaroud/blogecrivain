@@ -1,5 +1,5 @@
 <?php	
-
+//parametres de connection
 const HOST = 'localhost';
 const DB_NAME = 'blogdelecrivain';
 const CHARSET = 'utf8';

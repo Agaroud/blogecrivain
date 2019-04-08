@@ -39,7 +39,7 @@ $this->title = "AccueilAdmin";
         {
         ?>
             <div class="articles">
-                <h2><?= htmlspecialchars_decode($billet->getTitle());?></h2>                
+                <h2 class="titreArticle"><?= htmlspecialchars_decode($billet->getTitle());?></h2>                
                 <p><?= htmlspecialchars_decode($billet->getContent());?>...</p>                
                 <p>Créé le : <?= htmlspecialchars($billet->getDateAdded());?></p>
             </div>
@@ -48,9 +48,10 @@ $this->title = "AccueilAdmin";
             <div class="form">            
             	<form method="post" action="../public/index.php?route=supprimeBillet" onSubmit="return verif()">
             		<input type="hidden" value="<?php echo $billet->getId()?>" name="idBillet">           	
-            		<input type="submit" value="Supprimer" id="supprimeBillet" name="supprimeBillet">            	          	
+            		<input type="submit" value="Supprimer" id="supprimeBillet" name="supprimeBillet">   
+            		<a href="../public/index.php?route=editeBillet&amp;idBillet=<?= htmlspecialchars($billet->getId());?>" id="editer" >Editer</a>         	          	
         		</form>        	 
-        		<a href="../public/index.php?route=editeBillet&amp;idBillet=<?= htmlspecialchars($billet->getId());?>" id="editer" >Editer</a>
+        		
         	</div>          
         	<br>  
                        

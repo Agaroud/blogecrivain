@@ -10,9 +10,12 @@ h1, h2, h3, a {
 
 body {
     background-image: url("img/alaska.png");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 	background-size: cover;
+	margin:0;
+  	padding: 0;
 }
 
 .titre{
@@ -44,7 +47,7 @@ a:hover {
 
 section{
 	margin: 40px;
-	text-align: justify;
+	/*text-align: justify;*/
 }
 
 .entete{	
@@ -55,9 +58,10 @@ section{
 }
 
 #firstpage{
-	width:1000px;
+	width:100%;
 	margin-left: auto;
     margin-right: auto;
+    text-align : justify;
 }
 
 #apropos,#presentation{
@@ -83,6 +87,11 @@ section{
 	background-color: #EAF4F3;
 	border-radius: 5px;
 	padding:10px;
+	/*width : auto;*/
+	width:100%;
+	margin-left: auto;
+    margin-right: auto;
+    text-align : justify;
 }
 
 .commentaires{
@@ -105,15 +114,17 @@ section{
 }
 
 #editer{
-	display : block;
+	/*display : block;*/
 	border: 1px solid #e7e7e7;
 	border-radius: 5px;
+	padding:1px 20px;
 	background-color: white;
  	color: black;	
-	margin-left:1100px;
+	left:1090px;
 	position : relative;
-	margin-top : -20px;	
+	/*margin-top : -20px;*/	
 	text-align : center;
+	font-size:0.90em;
 }
 
 .notification{
@@ -137,12 +148,15 @@ input[type=submit], input[type=reset] {
  }
 
 input[type=submit]:hover{
- 	background-color: #e7e7e7;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  	-webkit-mask-size: 200%;
+  	animation: shine 2s infinite;
+ 	
 }
 
 #signaler, #supprimer{
 	position: relative;
-	left:1125px;
+	left:1080px;
 	color: #8b0000;
 	border-radius: 5px;
 	
@@ -155,7 +169,8 @@ input[type=submit]:hover{
 	text-align: left;
 	padding: 2px;
 	position: relative;
-	left: -90px;
+	left: 10px;
+	font-size:0.9em;
 	
 }
 
@@ -172,4 +187,192 @@ input[type=submit]:hover{
 	display : flex;
 	text-align: right;
 	margin-left:560px;	
+}
+
+#pageinconnue{
+	color: white;
+}
+
+@media only screen /*iPhone X*/
+and (device-width : 375px) 
+and (device-height : 812px) 
+and (-webkit-device-pixel-ratio : 3) {
+	
+	#editer{  		
+  		/*display:inline;*/ 		
+  		left:60px;	
+  		padding:1px 10px;  	
+  	}
+	
+	#supprimer{
+		left:80px;
+	}
+	
+	#designal{
+		/*left:20px;*/
+	}
+}
+
+@media only screen /*iPhone 6, 7, & 8*/
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (-webkit-min-device-pixel-ratio: 2){
+	#editer{  		
+  		/*display:inline;*/ 		
+  		left:60px;	
+  		padding:1px 10px;  	
+  	}
+  	
+  	.articles{
+		width:auto;
+	}
+	
+	#designal{
+		/*left:40px;*/
+	}
+	
+	#supprimer{
+		left:80px;
+	}
+	
+	#liens{		
+		margin-left: 60px;    	
+	}
+	
+}
+
+@media only screen /*iphone 5, , 5S, 5C and 5SE*/
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2){
+  
+  	#editer{	
+  		/*display:inline;*/ 		
+  		left:40px;	
+  		padding:1px 10px;  	
+  	}
+  	
+  	#liens{
+		display : inline;
+		text-align: center;
+		/*width:auto;*/	
+		width:100%;
+		margin-left: 10px;
+    	margin-right: auto;
+	}
+	
+	.articles{
+		width:auto;
+	}
+	
+	.titreArticle{
+		text-align: center;
+	}
+	
+	#supprimer{
+		left:20px;
+	}
+	
+	body{
+	 	
+	 	background-position: center center;
+	}
+  }
+  
+  @media screen /* Galaxy S4, S5 and Note 3 */
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  
+  	#liens{
+		
+		margin-left: 50px;
+    	
+	}
+  
+  	#editer{  		
+  		/*margin-left:10px;
+  		display:inline;*/   		
+  		left:80px;  			
+  		padding:1px 20px;	  	
+  	}
+  
+  	#supprimer{
+		left:200px;
+	}
+	
+	.articles{
+		width:auto;
+	}
+	
+  }
+  
+  @media only screen /* Nokia lumia */
+   and (max-width: 360px) {
+   
+    #supprimer{    	
+		left:40px;
+	}
+	
+	#editer{  		
+  		margin-left:10px;
+  		display:inline;  
+  		position:relative;
+  		left:90px;	  	
+  	}
+  	
+  	.articles{
+		width:auto;
+	}
+	
+	#liens{
+		flex-direction: column;
+		text-align: center;
+		/*width:auto;*/	
+		width:100%;
+		margin-left: 10px;
+    	margin-right: auto;
+	}
+  }
+  
+ @media only screen /*iPad Pro */
+ and (min-device-width: 834px) 
+ and (max-device-width: 1112px)
+ and (-webkit-min-device-pixel-ratio: 2) {
+ 	#supprimer{
+		left:700px;
+	}
+	
+	#editer{  		
+  		/*margin-left:10px;
+  		display:inline;*/  		
+  		left:700px;	
+  		padding:1px 20px;
+   	}
+}
+  
+@media only screen /*iPad*/
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+   	#supprimer{
+		left:500px;
+	}
+	
+	#editer{  		
+  		/*margin-left:10px;
+  		display:inline;*/ 		
+  		left:500px;	
+  		padding:1px 20px;
+   	}
+   	
+   	
+#liens{
+	display : flex;
+	text-align: right;
+	margin-left:200px;	
+}
+   	
+   	
+   
 }

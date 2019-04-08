@@ -4,8 +4,10 @@ namespace App\src\model\DAO;
 
 use App\src\model\Billet;
 
+
 class BilletDAO extends DAO
 {
+    
     public function getBillets()
     {
         $sql = 'SELECT id, title, SUBSTRING(content, 1, 500) AS content, date_added FROM billet ORDER BY id DESC';
@@ -26,6 +28,7 @@ class BilletDAO extends DAO
         if($row) {
             return $this->buildObject($row);
         } else {
+           
             echo 'Aucun billet existant avec cet identifiant';
         }
     }
@@ -59,6 +62,7 @@ class BilletDAO extends DAO
         if($row) {
             return $this->buildObject($row);
         } else {
+            
             echo 'Aucun billet existant avec cet identifiant';
         }
     }

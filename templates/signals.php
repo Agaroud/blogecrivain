@@ -40,9 +40,9 @@ $this->title = "Signals";
         </div>
         <form method="post" action="../public/index.php?route=supprimeComment" onSubmit="return verif()">
             <input type="hidden" value="<?php echo $comment->getId()?>" name="idComment">
-           	
+           	<a href="../public/index.php?route=designalComment&amp;idComment=<?= htmlspecialchars($comment->getId());?>" id="designal" >Désignaler</a>
             <input type="submit" value="Supprimer" id="supprimer" name="supprimer">
-            <a href="../public/index.php?route=designalComment&amp;idComment=<?= htmlspecialchars($comment->getId());?>" id="designal" >Désignaler</a>
+            
         </form>
         
         <?php
