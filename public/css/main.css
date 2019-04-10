@@ -46,8 +46,7 @@ a:hover {
 }
 
 section{
-	margin: 40px;
-	/*text-align: justify;*/
+	margin: 40px;	
 }
 
 .entete{	
@@ -86,8 +85,7 @@ section{
 .articles{
 	background-color: #EAF4F3;
 	border-radius: 5px;
-	padding:10px;
-	/*width : auto;*/
+	padding:10px;	
 	width:100%;
 	margin-left: auto;
     margin-right: auto;
@@ -158,8 +156,11 @@ input[type=submit]:hover{
 	position: relative;
 	left:1080px;
 	color: #8b0000;
-	border-radius: 5px;
-	
+	border-radius: 5px;	
+}
+
+#signaler{
+	left:1150px;
 }
 
 #designal{
@@ -198,18 +199,17 @@ and (device-width : 375px)
 and (device-height : 812px) 
 and (-webkit-device-pixel-ratio : 3) {
 	
-	#editer{  		
-  		/*display:inline;*/ 		
-  		left:60px;	
+	#editer{	
+   		left:80px;	
   		padding:1px 10px;  	
   	}
 	
 	#supprimer{
-		left:80px;
-	}
-	
-	#designal{
-		/*left:20px;*/
+		left:100px;
+	}	
+		
+	#signaler{
+	left:120px;
 	}
 }
 
@@ -217,8 +217,8 @@ and (-webkit-device-pixel-ratio : 3) {
 and (min-device-width : 375px) 
 and (max-device-width : 667px) 
 and (-webkit-min-device-pixel-ratio: 2){
-	#editer{  		
-  		/*display:inline;*/ 		
+	
+	#editer{ 				
   		left:60px;	
   		padding:1px 10px;  	
   	}
@@ -227,16 +227,19 @@ and (-webkit-min-device-pixel-ratio: 2){
 		width:auto;
 	}
 	
-	#designal{
-		/*left:40px;*/
-	}
+	
 	
 	#supprimer{
-		left:80px;
+		left:100px;
 	}
 	
 	#liens{		
-		margin-left: 60px;    	
+		margin-left: 60px; 
+		width:auto;   	
+	}
+	
+	#signaler{
+	left:120px;
 	}
 	
 }
@@ -246,17 +249,15 @@ and (-webkit-min-device-pixel-ratio: 2){
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2){
   
-  	#editer{	
-  		/*display:inline;*/ 		
-  		left:40px;	
+  	#editer{  				
+  		left:30px;	
   		padding:1px 10px;  	
   	}
   	
   	#liens{
 		display : inline;
 		text-align: center;
-		/*width:auto;*/	
-		width:100%;
+		width:auto;		
 		margin-left: 10px;
     	margin-right: auto;
 	}
@@ -273,6 +274,10 @@ and (-webkit-min-device-pixel-ratio: 2){
 		left:20px;
 	}
 	
+	#signaler{
+	left:100px;
+	}
+	
 	body{
 	 	
 	 	background-position: center center;
@@ -284,27 +289,27 @@ and (-webkit-min-device-pixel-ratio: 2){
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
   
-  	#liens{
-		
-		margin-left: 50px;
-    	
+  	#liens{	
+  		width:auto;	
+		margin-left: 50px;    	
 	}
   
-  	#editer{  		
-  		/*margin-left:10px;
-  		display:inline;*/   		
+  	#editer{  			
   		left:80px;  			
   		padding:1px 20px;	  	
   	}
   
   	#supprimer{
-		left:200px;
+		left:250px;
 	}
 	
 	.articles{
 		width:auto;
 	}
 	
+	#signaler{
+	left:130px;
+	}
   }
   
   @media only screen /* Nokia lumia */
@@ -318,7 +323,7 @@ and (-webkit-min-device-pixel-ratio: 2){
   		margin-left:10px;
   		display:inline;  
   		position:relative;
-  		left:90px;	  	
+  		left:70px;	  	
   	}
   	
   	.articles{
@@ -333,6 +338,10 @@ and (-webkit-min-device-pixel-ratio: 2){
 		margin-left: 10px;
     	margin-right: auto;
 	}
+	
+	#signaler{
+	left:100px;
+	}
   }
   
  @media only screen /*iPad Pro */
@@ -344,11 +353,14 @@ and (-webkit-min-device-pixel-ratio: 2){
 	}
 	
 	#editer{  		
-  		/*margin-left:10px;
-  		display:inline;*/  		
-  		left:700px;	
+  		 		
+  		left:800px;	
   		padding:1px 20px;
    	}
+   	
+   	#signaler{
+	left:700px;
+	}
 }
   
 @media only screen /*iPad*/
@@ -359,10 +371,13 @@ and (-webkit-min-device-pixel-ratio: 1) {
 		left:500px;
 	}
 	
+	#signaler{
+	left:500px;
+	}
+	
 	#editer{  		
-  		/*margin-left:10px;
-  		display:inline;*/ 		
-  		left:500px;	
+  		
+  		left:550px;	
   		padding:1px 20px;
    	}
    	

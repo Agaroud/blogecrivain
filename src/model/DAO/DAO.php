@@ -2,8 +2,8 @@
 
 namespace App\src\model\DAO;
 
-use Exception;
-use PDO;
+use Exception;//classe de base
+use PDO; //classe de base
 
 abstract class DAO//classe abstraite : ne peut être instanciée
 {
@@ -33,7 +33,7 @@ abstract class DAO//classe abstraite : ne peut être instanciée
         //On lève une erreur si la connexion échoue
         catch(Exception $errorConnection)
         {
-            die ('Erreur de connection :'.$errorConnection->getMessage());
+            die ('Erreur de connection :'.$errorConnection->getMessage());            
         }
     }
     

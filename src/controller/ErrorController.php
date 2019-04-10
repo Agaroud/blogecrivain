@@ -23,12 +23,12 @@ class ErrorController
     public function unknown()
     {
         $this->view->render('unknown');
-        //require '../templates/unknown.php';
+        
     }
 
     public function error()
     {
         $this->view->render('error');
-        //require '../templates/error.php';
+        
     }
 }
